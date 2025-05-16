@@ -1,9 +1,8 @@
-import 'package:facebook/UI/homepage.dart';
-import 'package:facebook/UNIT/topnavigationbar.dart';
+import 'package:facebook/UI/splash_page.dart';
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(Main());
+  runApp(const Main());
 }
 
 class Main extends StatelessWidget {
@@ -12,7 +11,20 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:Topnavigationbar() ,
+      home:const SplashPage() ,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.blue
+      ),
+     darkTheme: ThemeData(
+      brightness: Brightness.dark,
+      primaryColor: Colors.blue
+     ),
+
+     themeMode: ThemeMode.dark,
+     
+      
     );
   }
 }
