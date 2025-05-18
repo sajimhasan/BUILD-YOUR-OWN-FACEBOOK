@@ -13,6 +13,7 @@ class _MenuState extends State<Menu> {
   bool isVisibility = false;
   bool issetting = false;
   bool seetingout = false;
+  bool isprofassonal = true;
 
   @override
   Widget build(BuildContext context) {
@@ -176,7 +177,7 @@ class _MenuState extends State<Menu> {
                 visible: isVisibility,
                 child: const Column(
                   children: [
-                    SizedBox(height: 10,),
+                    SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -187,8 +188,9 @@ class _MenuState extends State<Menu> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 10,),
-                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         setting_screen(
                           iconsss: Icons.crisis_alert,
@@ -200,7 +202,7 @@ class _MenuState extends State<Menu> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -214,7 +216,7 @@ class _MenuState extends State<Menu> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -243,7 +245,7 @@ class _MenuState extends State<Menu> {
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -269,7 +271,6 @@ class _MenuState extends State<Menu> {
                   ),
                 ],
               ),
-              const Divider(),
               Visibility(
                 visible: issetting,
                 child: Column(
@@ -306,6 +307,7 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
+              const Divider(),
               Row(
                 children: [
                   const Icon(Icons.settings, size: 30),
@@ -392,17 +394,103 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
+              const Divider(),
+              Row(
+                children: [
+                  const Icon(Icons.collections_bookmark_outlined, size: 30),
+                  const SizedBox(width: 10),
+                  const Text(
+                    "Professinal access",
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  ),
+                  const Spacer(),
+                  IconButton(
+                    onPressed: () {
+                      setState(() {
+                        isprofassonal = !isprofassonal;
+                      });
+                    },
+                    icon: Icon(
+                      isprofassonal
+                          ? Icons.arrow_drop_up
+                          : Icons.arrow_drop_down,
+                    ),
+                  ),
+                ],
+              ),
+              const Divider(),
+              Visibility(
+                visible: isprofassonal,
+                child: Row(
+                  children: [
+                    Costom_profasonal(
+                      backgroundImage: "images/download.png",
+                      icon: Icons.campaign,
+                      subtitle: "Get tools to help you grow on Facebook.",
+                      title: "Public presence",
+                    ),
+                    SizedBox(width: 10),
+                    Costom_profasonal(
+                      backgroundImage: "images/download.png",
+                      icon: Icons.verified,
+                      subtitle: "Build trust with a verified badge.",
+                      title: "Meta Verified",
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  Icon(Icons.widgets,size: 30,),
+                  SizedBox(width: 10,),
+                  Text("Also from Meta",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+                  Spacer(),
+                  IconButton(onPressed: (){
+
+                  }, icon: Icon(Icons.arrow_drop_up))
+                ],
+              ),
+              Visibility(child: Column(
+                children: [
+                  Container(
+                    height: 70,
+                    width: MediaQuery.of(context).size.width,
+                   decoration: BoxDecoration(
+                    color: Colors.white24,
+                    borderRadius: BorderRadius.circular(20)
+                   ),
+                   child: Padding(
+                     padding: const EdgeInsets.all(8.0),
+                     child: Row(
+                      children: [
+                        Icon(Icons.edit,size: 30,),
+                        SizedBox(width: 10,),
+                        Text("Edits",style: TextStyle(
+                          fontSize: 25,fontWeight: FontWeight.bold
+                        ),)
+                      ],
+                     ),
+                   ),
+
+                  )
+                ],
+              )),
+
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(MediaQuery.of(context).size.width, 45),
-                  backgroundColor: Colors.white24
+                  backgroundColor: Colors.white24,
                 ),
-                onPressed: (){
-
-              }, child: Text("Logout",style: TextStyle(
-                fontSize: 20, fontWeight: FontWeight.bold,
-                color: Colors.white
-              ),))
+                onPressed: () {},
+                child: const Text(
+                  "Logout",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

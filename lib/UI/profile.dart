@@ -1,3 +1,4 @@
+import 'package:facebook/UNIT/Costom_settingfut.dart';
 import 'package:facebook/UNIT/CustomSetting.dart';
 import 'package:flutter/material.dart';
 
@@ -33,8 +34,12 @@ class Profile extends StatelessWidget {
           //    } , child: Text( isVisibility? "Shoo more" : "show less")),
 
         
-       
-        ],
+ Costom_profasonal(
+                title: "Meta Verified",
+                subtitle: "Build trust with a verified badge.",
+                backgroundImage: "images/download.png",
+                icon: Icons.verified,
+              ),        ],
       ),
 
     );
