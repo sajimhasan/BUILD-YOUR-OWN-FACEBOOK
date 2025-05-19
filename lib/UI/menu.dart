@@ -14,6 +14,8 @@ class _MenuState extends State<Menu> {
   bool issetting = false;
   bool seetingout = false;
   bool isprofassonal = true;
+  bool ismoremata = true; 
+
 
   @override
   Widget build(BuildContext context) {
@@ -422,6 +424,7 @@ class _MenuState extends State<Menu> {
               Visibility(
                 visible: isprofassonal,
                 child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Costom_profasonal(
                       backgroundImage: "images/download.png",
@@ -429,7 +432,6 @@ class _MenuState extends State<Menu> {
                       subtitle: "Get tools to help you grow on Facebook.",
                       title: "Public presence",
                     ),
-                    SizedBox(width: 10),
                     Costom_profasonal(
                       backgroundImage: "images/download.png",
                       icon: Icons.verified,
@@ -446,33 +448,23 @@ class _MenuState extends State<Menu> {
                   Text("Also from Meta",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
                   Spacer(),
                   IconButton(onPressed: (){
+                    setState(() {
+                      ismoremata = !ismoremata ; 
+                    });
 
-                  }, icon: Icon(Icons.arrow_drop_up))
+                  }, icon: Icon( ismoremata? Icons.arrow_drop_up: Icons.arrow_drop_down))
                 ],
               ),
-              Visibility(child: Column(
+              Visibility(
+              visible:ismoremata,
+              child:const Column(
                 children: [
-                  Container(
-                    height: 70,
-                    width: MediaQuery.of(context).size.width,
-                   decoration: BoxDecoration(
-                    color: Colors.white24,
-                    borderRadius: BorderRadius.circular(20)
-                   ),
-                   child: Padding(
-                     padding: const EdgeInsets.all(8.0),
-                     child: Row(
-                      children: [
-                        Icon(Icons.edit,size: 30,),
-                        SizedBox(width: 10,),
-                        Text("Edits",style: TextStyle(
-                          fontSize: 25,fontWeight: FontWeight.bold
-                        ),)
-                      ],
-                     ),
-                   ),
-
-                  )
+                  Meta_container(icono: Icons.edit, title: "Edits"),
+                  Meta_container(icono: Icons.check_box_outline_blank, title: "Instagram"),
+                  Meta_container(icono: Icons.add_photo_alternate_rounded, title: "Threads"),
+                  Meta_container(icono: Icons.message_sharp, title: "messager"),
+                  Meta_container(icono: Icons.phone, title: "WhatsApp ")
+                 
                 ],
               )),
 

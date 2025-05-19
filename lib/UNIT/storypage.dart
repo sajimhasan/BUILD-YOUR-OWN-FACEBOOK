@@ -10,6 +10,16 @@ class Storypage extends StatefulWidget {
 final List<Map<String , String>> imformations = [
     {"name":'sajim' , 'image':'https://i.imgur.com/BoN9kdC.png',},
     {"name":'israt', 'image':'https://i.imgur.com/Ot5DWAW.png'},
+        {"name":'sajim' , 'image':'https://i.imgur.com/BoN9kdC.png',},
+
+    {"name":'sajim' , 'image':'https://i.imgur.com/BoN9kdC.png',},
+
+    {"name":'sajim' , 'image':'https://i.imgur.com/BoN9kdC.png',},
+
+    {"name":'sajim' , 'image':'https://i.imgur.com/BoN9kdC.png',},
+
+
+    
   ];
 
 class _StorypageState extends State<Storypage> {
@@ -26,7 +36,8 @@ class _StorypageState extends State<Storypage> {
           child: Container(
           height: 175,
           width: 120,
-          decoration: BoxDecoration(color: Colors.black,
+          decoration: BoxDecoration(
+            color: Colors.black,
               borderRadius: BorderRadius.circular(20)),
 
           child: Column(
