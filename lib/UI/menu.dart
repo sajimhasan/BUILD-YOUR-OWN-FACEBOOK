@@ -136,8 +136,7 @@ class _MenuState extends State<Menu> {
                 ),
               ),
               const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+ mainAxisAlignment: MainAxisAlignment.spaceAround,                children: [
                   setting_screen(
                     iconsss: Icons.video_collection_outlined,
                     title: "Video",
@@ -147,8 +146,7 @@ class _MenuState extends State<Menu> {
               ),
               const SizedBox(height: 10),
               const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+ mainAxisAlignment: MainAxisAlignment.spaceAround,                children: [
                   setting_screen(
                     iconsss: Icons.access_time_rounded,
                     title: "Memories",
@@ -158,8 +156,7 @@ class _MenuState extends State<Menu> {
               ),
               const SizedBox(height: 10),
               const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+ mainAxisAlignment: MainAxisAlignment.spaceAround,                children: [
                   setting_screen(
                     iconsss: Icons.home_work_outlined,
                     title: "Market",
@@ -169,7 +166,7 @@ class _MenuState extends State<Menu> {
               ),
               const SizedBox(height: 10),
               const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   setting_screen(iconsss: Icons.feed, title: "Feed"),
                   setting_screen(iconsss: Icons.event, title: "Event"),
@@ -181,8 +178,7 @@ class _MenuState extends State<Menu> {
                   children: [
                     SizedBox(height: 10),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+ mainAxisAlignment: MainAxisAlignment.spaceAround,                      children: [
                         setting_screen(iconsss: Icons.face, title: "Avatars"),
                         setting_screen(
                           iconsss: Icons.wallet_giftcard,
@@ -192,11 +188,11 @@ class _MenuState extends State<Menu> {
                     ),
                     SizedBox(height: 10),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+ mainAxisAlignment: MainAxisAlignment.spaceAround,                      children: [
                         setting_screen(
                           iconsss: Icons.crisis_alert,
                           title: "Crisis Response",
+                          
                         ),
                         setting_screen(
                           iconsss: Icons.find_in_page,
@@ -206,8 +202,7 @@ class _MenuState extends State<Menu> {
                     ),
                     SizedBox(height: 10),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+ mainAxisAlignment: MainAxisAlignment.spaceAround,                      children: [
                         setting_screen(
                           iconsss: Icons.games_outlined,
                           title: "Gaming",
@@ -219,14 +214,16 @@ class _MenuState extends State<Menu> {
                       ],
                     ),
                     SizedBox(height: 10),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        setting_screen(
-                          iconsss: Icons.pages_outlined,
-                          title: "Page",
-                        ),
-                      ],
+                    Padding(
+                      padding: EdgeInsets.only(left: 10),
+                      child: Row(
+                       mainAxisAlignment: MainAxisAlignment.start,                      children: [
+                          setting_screen(
+                            iconsss: Icons.pages_outlined,
+                            title: "Page",
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),

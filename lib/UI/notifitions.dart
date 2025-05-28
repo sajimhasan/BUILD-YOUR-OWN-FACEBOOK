@@ -57,11 +57,36 @@ class _NotifitionsState extends State<Notifitions> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             // Facebook Logo
-                            Image.asset(
-                              "images/download.png",
-                              fit: BoxFit.contain,
-                              height: 60,
-                              width: 60,
+                            Stack(
+                              children: [
+                              Container(
+                                
+                                height: 120,
+                                width: 100,
+                                color: Colors.transparent,
+                                
+                              ),
+                              Positioned(
+                                left: 5,
+                                bottom: 5,
+                                child: Container(
+                                height: 80,
+                                width: 80,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(50)
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(50),
+                                  child: Image.asset("images/download.png",fit: BoxFit.cover,height: 80,width: 80,)),
+                                
+                              )
+                              ),
+                              Positioned(
+                                bottom: 2,
+                                left: 50,
+                                child: CircleAvatar(child: Icon(Icons.abc)))
+                              ]
                             ),
                            const SizedBox(width: 10), // spacing between image and text
                             // Expanded text content

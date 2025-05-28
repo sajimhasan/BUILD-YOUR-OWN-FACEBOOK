@@ -9,8 +9,8 @@ class setting_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      height: 100,
-      width: 190,
+      height: 80,
+      width: 170,
       decoration: BoxDecoration(
         color: Colors.white24,
         borderRadius: BorderRadius.circular(20)
@@ -26,7 +26,7 @@ class setting_screen extends StatelessWidget {
               Text(title,style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold
-              ),)
+              ),overflow: TextOverflow.ellipsis,)
             ],
            ),
          ),

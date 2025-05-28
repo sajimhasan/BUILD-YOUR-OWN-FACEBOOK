@@ -1,4 +1,5 @@
 import 'package:facebook/UNIT/Costom_settingfut.dart';
+import 'package:facebook/UNIT/postlist.dart';
 import 'package:flutter/material.dart';
 
 class Videosections extends StatelessWidget {
@@ -9,11 +10,26 @@ class Videosections extends StatelessWidget {
     return   Scaffold(
  body: Column(
   children: [
-    //Costom_Settingfut(icons: Icons.abc, title: "hello world")
-     Costom_Settingfut(bal:Icons.abc_sharp ,title: "this first ",ontap: () {
-       
-     },)
-    
+   Container(
+    height: 700,
+    width: MediaQuery.of(context).size.width,
+    color: Colors.deepPurpleAccent,
+    child: Column(
+      children: [
+        Row(
+          children: [
+            Text("VIDEO"),
+          ],
+        ),
+        Container(
+          height: 300,
+          width: MediaQuery.of(context).size.width,
+          color: Colors.brown,
+        ),
+
+      ],
+    ),
+   )
   ],
  )
     );

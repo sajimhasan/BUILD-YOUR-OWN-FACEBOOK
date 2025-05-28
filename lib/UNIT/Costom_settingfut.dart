@@ -17,7 +17,7 @@ class Costom_Settingfut extends StatelessWidget {
     return GestureDetector(
       onTap: ontap,
       child: Container(
-        height: 60,
+        height: 50,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Colors.black26,
@@ -144,7 +144,7 @@ class Meta_container extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 70,
+        height: 60,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Colors.white24,
